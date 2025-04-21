@@ -13,8 +13,9 @@ A decryption tool for .ab files from [**新月同行**](https://xytx.firewick.ne
 </div>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white">
-  <img src="https://img.shields.io/github/v/release/maynut02/fellowmoon-decrypter?label=latest%20release&color=blue" />
+  <img alt="license" src="https://img.shields.io/github/license/maynut02/fellowmoon-decrypter">
+  <img alt=".NET" src="https://img.shields.io/badge/.NET-≥%208-512BD4?logo=csharp">
+  <img src="https://img.shields.io/github/v/release/maynut02/fellowmoon-decrypter.svg" />
   <img src="https://img.shields.io/badge/platform-Windows-blue" />
 </p>
 
@@ -71,6 +72,10 @@ A decryption tool for .ab files from [**新月同行**](https://xytx.firewick.ne
 - 카운터 초기값 - `64비트 카운터 + 64비트 0으로 채운 suffix`
 - 고정 비밀번호 - `System.Byte[]`
 - salt - `확장자를 제외한 파일명`
+
+###
+
+[Python Code](https://github.com/maynut02/fellowmoon-decrypter/blob/master/python/main.py)
 
 <div><br></div>
 
