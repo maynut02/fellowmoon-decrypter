@@ -43,7 +43,7 @@ A decryption tool for .ab files from [**新月同行**](https://xytx.firewick.ne
 
 1. [Download the latest release](https://github.com/maynut02/fellowmoon-decrypter/releases/latest)
 2. Place `.ab` files from FellowMoon into the `import/` folder
-3. Run `FellowmoonDecrypter.exe`
+3. Run `FMDC.exe`
 4. Decrypted `.ab` files will be automatically saved in the `export/` folder
 5. Load the `export/` folder using an unpacking tool like [AssetStudio](https://github.com/zhangjiequan/AssetStudio)
 
@@ -51,7 +51,7 @@ A decryption tool for .ab files from [**新月同行**](https://xytx.firewick.ne
 
 1. [마지막 릴리즈 파일 다운로드](https://github.com/maynut02/fellowmoon-decrypter/releases/latest)
 2. 신월동행의 `.ab` 파일을 `import/` 폴더 내부에 넣기
-3. `FellowmoonDecrypter.exe` 실행
+3. `FMDC.exe` 실행
 4. 복호화된 `.ab` 파일이 `export/` 폴더 내부에 자동으로 생성
 5. [AssetStudio](https://github.com/zhangjiequan/AssetStudio)와 같은 언패킹 도구에서 `export/` 폴더를 로드
 
