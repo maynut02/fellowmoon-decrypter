@@ -39,6 +39,12 @@ A decryption tool for .ab files from [**新月同行**](https://xytx.firewick.ne
 
 <div><br></div>
 
+## 요구사항
+
+- .NET 8.0
+
+<div><br></div>
+
 ## 🚀 How to Use
 
 1. [Download the latest release](https://github.com/maynut02/fellowmoon-decrypter/releases/latest)
