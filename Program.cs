@@ -10,6 +10,8 @@ namespace fellowmoon_decrypter
     {
         static void Main(string[] args)
         {
+            Console.OutputEncoding = Encoding.UTF8;
+
             // 실행 파일 기준으로 import/export 폴더 경로
             var basePath = AppDomain.CurrentDomain.BaseDirectory;
             var inputFolder = Path.Combine(basePath, "import");
@@ -22,6 +24,8 @@ namespace fellowmoon_decrypter
             }
 
             var abFiles = Directory.GetFiles(inputFolder, "*.ab", SearchOption.AllDirectories);
+            int total = abFiles.Length;
+            const int barLength = 30;
             Console.WriteLine($"총 {abFiles.Length}개의 .ab 파일을 복호화합니다.\n");
 
             int idx = 0;
@@ -52,10 +56,21 @@ namespace fellowmoon_decrypter
                     Console.WriteLine($"[{idx}/{abFiles.Length}] {relPath} → 헤더 불일치: \"{header}\"");
 
                 File.WriteAllBytes(outputPath, decrypted);
-                Console.WriteLine($"[{idx}/{abFiles.Length}] {relPath} → {outRel}");
+
+                // 진행바 계산
+                int done = idx + 1;
+                double ratio = (double)done / total;
+                int filledLen = (int)Math.Round(ratio * barLength);
+                filledLen = Math.Clamp(filledLen, 0, barLength);
+
+                string bar = new string('█', filledLen)
+                           + new string('░', barLength - filledLen);
+
+                int percent = (int)(ratio * 100);
+                Console.Write($"\r🛠️  복호화 중 {bar} [{done}/{total}] {percent}%");
             }
 
-            Console.WriteLine("\n모든 복호화 작업이 완료되었습니다.");
+            Console.WriteLine("\n\n모든 복호화 작업이 완료되었습니다.");
             Console.WriteLine("프로그램을 종료하려면 아무 키나 누르세요...");
             Console.ReadKey();
         }
