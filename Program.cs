@@ -56,6 +56,8 @@ namespace fellowmoon_decrypter
             }
 
             Console.WriteLine("\n모든 복호화 작업이 완료되었습니다.");
+            Console.WriteLine("프로그램을 종료하려면 아무 키나 누르세요...");
+            Console.ReadKey();
         }
 
         // Python 코드와 동일한 PBKDF1‑SHA1 반복 해싱
